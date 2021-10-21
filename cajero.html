@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content-type="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automatico</title>
+</head>
+<body>
+    <script type="text/javascript" src="js/cajaautomatica.js"></script>
+
+        <h2>Bienvenido <script>IniciarCajero()</script></h2>
+
+        <form id="area" onsubmit = "return accionCaja()" class="form-options">
+            <p class="p-opciones">User, que deseas hacer? </p>
+            <!--LIST-->
+            <select name="lista" size="1" class="select-option">
+                <option value="" class="options">--Selecciona Una Opción--</option>
+                <option value="retiro" class="options">Retiros</option>
+                <option value="consignas" class="options">Consignaciones</option>
+                <option value="saldo" class="options">ver Saldo</option>
+            </select>
+            <!--END LIST-->
+        </form>
+        <aside class="form-calcular">
+            <h2 class="h2-form">Ingresa los Numeros</h2>
+            <form onsubmit = "return accionCaja()" >
+                Cantidad de Dinero:
+                <input type="text" id="cantidad" class="input-1"/>
+                <input type="submit" value="ejecutar" class="submit-form"/>
+            </form>
+        </aside>
+
+
+
+        <div class="div-resultado">
+            <p id="saldoCuenta" class="p-resultado">El Saldo es de:&nbsp;</p>
+        </div>
+        
+        <script content-type="text/javascript" src="js/iniciarCajero.js"></script>
+
+</body>
+</html>
